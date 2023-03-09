@@ -10,7 +10,7 @@ const DonationProvider = ({children}) => {
     const { address, isConnected } = useAccount();
     const [balance, setBalance] = useState();
     const [allowanceData, setAllowanceData] = useState();
-    const [donationAmount, setDonationAmount] = useState();
+    const [donationAmount, setDonationAmount] = useState(100);
     const [txInit, setTxInit] = useState(false)
     const [txHash, setTxHash] = useState(undefined)
     const [txConfirmed, setTxConfirmed] = useState(false)
