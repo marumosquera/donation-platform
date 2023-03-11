@@ -16,6 +16,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Footer } from "./components/Footer/Footer";
 import { Projects } from "./pages/Projects";
 import { UserProfile } from "./pages/UserProfile";
+
 const chains = [arbitrum, mainnet, polygon];
 const projectId = "41557e3b3f0f43cc44309c3fdef4241e";
 
@@ -40,6 +41,7 @@ function App() {
               <Route path="/projects" element={<Projects />} />
               <Route path="/my-profile" element={<UserProfile />} />
             </Routes>
+      
             <Footer />
           </BrowserRouter>
         </DonationProvider>
