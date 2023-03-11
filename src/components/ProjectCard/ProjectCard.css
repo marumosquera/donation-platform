@@ -1,0 +1,46 @@
+.project-card-container {
+  height: fit-content;
+  word-wrap: normal;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
+  box-shadow: -1px 5px 10px 5px rgba(27, 26, 27, 0.67);
+  -webkit-box-shadow: -1px 5px 10px 5px rgba(27, 26, 27, 0.67);
+  -moz-box-shadow: -1px 5px 10px 5px rgba(27, 26, 27, 0.67);
+}
+
+.card-img > img {
+  border-radius: 20px;
+  height: 200px;
+  width: 100%;
+  z-index: -1;
+}
+
+
+.verified{
+    background-color: #000;
+    color:#00FFA3 ;
+}
+
+.card-project-name{
+    border-color: #03E1FF !important;
+    border-left: 2px solid;
+    padding-left: 15px;
+}
+
+.card-button{
+    background: radial-gradient(70.64% 70.64% at 50% 25.87%, #9A60FF 0%, #6A23E7 100%);
+    position: relative;
+    padding: 10px 14px;
+    border-radius: 3rem;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 10%);
+    -webkit-transition: .2s;
+    transition: .2s;
+    color: #fff;
+    font-size: .75rem;
+    font-weight: 900;
+    letter-spacing: 0.5em;
+    text-align: center;
+    text-decoration: none;
+    text-transform: capitalize;
+    cursor: pointer;
+}

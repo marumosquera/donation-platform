@@ -1,0 +1,13 @@
+.banner{
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.8em;
+    color: black;
+    background: linear-gradient(270deg, rgb(171, 102, 255) 0%, rgb(20, 241, 149) 101.39%);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.banner-marquee{
+    font-size: 15em;
+    color: white;
+}

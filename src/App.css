@@ -2,6 +2,17 @@
   text-align: center;
 }
 
+nav{
+  background-color: transparent;
+}
+
+body{
+  background-color: black;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 900;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
