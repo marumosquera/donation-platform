@@ -2,6 +2,7 @@ import React from "react";
 import { Banner } from "../components/Banner/Banner";
 import { BannerTitle } from "../components/BannerTitle/BannerTitle";
 import { ProjectContainer } from "../components/ProjectContainer/ProjectContainer";
+import { ProjectOverview } from "../components/ProjectOverview/ProjectOverview";
 
 export const Projects = () => {
   return (
@@ -13,7 +14,6 @@ export const Projects = () => {
       />
       <BannerTitle />
       <ProjectContainer />
-      
     </div>
   );
 };

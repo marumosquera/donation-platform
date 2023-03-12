@@ -47,7 +47,7 @@
   font-family: Dolce;
   letter-spacing: 3px; */
 
-  background: radial-gradient(70.64% 70.64% at 50% 25.87%, #9A60FF 0%, #6A23E7 100%);
+  background: radial-gradient(70.64% 70.64% at 50% 25.87%, #9A60FF 0%, #37078a 100%);
   padding: 20px 34px;
   border-radius: 3rem;
   box-shadow: 0 4px 8px 0 rgb(0 0 0 / 10%);
@@ -68,7 +68,7 @@
 }
 
 .banner-home button:hover {
-  background-color: rgba(255, 255, 255, 0.757);
+  background: radial-gradient(70.64% 70.64% at 50% 25.87%, #03E1FF 0%, #13565e 100%);
 }
 .shampoo {
   width: 260px;

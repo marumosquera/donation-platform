@@ -12,7 +12,7 @@ export const NavBar = () => {
             {" "}
             <a className="flex items-center">
               <span className="self-center text-xl font-semibold whitespace-nowrap flex logo">
-                <img src="../assets/piltri.svg" alt="" />
+                <img src="./piltri.svg" alt="" />
                 <img src="../assets/piltri-text.svg" alt="PILTRI" />
               </span>
             </a>
