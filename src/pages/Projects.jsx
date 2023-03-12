@@ -4,7 +4,7 @@ import { ProjectContainer } from '../components/ProjectContainer/ProjectContaine
 
 export const Projects = () => {
   return (
-    <div>
+    <div className='page-size'>
       <Banner title={' Projects '} slogan={'play your part'} cta={'Donate now'}/>
         <ProjectContainer/>
     </div>

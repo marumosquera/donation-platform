@@ -6,9 +6,14 @@ import {IoPaw} from 'react-icons/io5';
 import {AiFillTwitterCircle} from 'react-icons/ai';
 import {BiCategoryAlt} from 'react-icons/bi';
 import {RiCoinsFill} from 'react-icons/ri';
+import {GiEarthAmerica} from 'react-icons/gi';
+import {IoHome} from 'react-icons/io5';
+import {GiEarthSpit} from 'react-icons/gi';
+import {Link} from 'react-router-dom';
 
 export const ProjectCard = ({ project }) => {
   return (
+    <Link to={`/donate/${project.address}`}>
     <div className=" gap-6 w-full project-card-container">
       <div className="relative mx-auto w-full">
         <a
@@ -32,8 +37,11 @@ export const ProjectCard = ({ project }) => {
                   </p>
 
                   <p className="flex items-center font-medium text-gray-200">
-                   <IoPaw className="w-5 h-5 fill-current mr-2"/>
-                    
+                    {project.tags == 'environment' &&   <GiEarthAmerica className="w-5 h-5 fill-current mr-2"/>}
+                    {project.tags == 'animal welfare' &&   <IoPaw className="w-5 h-5 fill-current mr-2"/>}
+                    {project.tags == 'poverty' &&   <IoHome className="w-5 h-5 fill-current mr-2"/>}
+                    {project.tags == 'natural disaster' &&    <GiEarthSpit className="w-5 h-5 fill-current mr-2"/>}
+    
                   </p>
 
                   <p className="flex items-center font-medium text-gray-200">
@@ -50,7 +58,7 @@ export const ProjectCard = ({ project }) => {
 
             <div className="mt-4">
               <h2
-                className="font-medium text-base md:text-lg text-gray-200 line-clamp-1 card-project-name"
+                className="font-medium text-base md:text-lg text-gray-200 line-clamp-1 card-project-name "
                 title="New York"
               >
                 {project.projectName}
@@ -93,6 +101,6 @@ export const ProjectCard = ({ project }) => {
         </a>
       </div>
     </div>
-
+    </Link>
   );
 };

@@ -14,6 +14,10 @@ body{
   font-weight: 900;
 }
 
+.page-size{
+  min-height: 80vh;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

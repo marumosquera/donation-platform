@@ -19,10 +19,12 @@
 .verified{
     background-color: #000;
     color:#00FFA3 ;
+    border: 1px solid !important;
+    align-items: center;
 }
 
 .card-project-name{
-    border-color: #03E1FF !important;
+    border-color: #DC1FFF !important;
     border-left: 2px solid;
     padding-left: 15px;
 }

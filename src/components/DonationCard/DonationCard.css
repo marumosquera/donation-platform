@@ -4,6 +4,10 @@
     align-content: center;
 }
 
+.bg-don-card{
+    background-color: rgba(6, 6, 6, 0.923);
+}
+
 .donate-with{
     font-size: larger;
     font-weight: 700;

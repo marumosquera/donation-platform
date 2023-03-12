@@ -16,6 +16,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Footer } from "./components/Footer/Footer";
 import { Projects } from "./pages/Projects";
 import { UserProfile } from "./pages/UserProfile";
+import { Donate } from "./pages/Donate";
+import { GrEmergency } from "react-icons/gr";
 
 const chains = [arbitrum, mainnet, polygon];
 const projectId = "41557e3b3f0f43cc44309c3fdef4241e";
@@ -24,6 +26,7 @@ const { provider } = configureChains(chains, [w3mProvider({ projectId })]);
 const wagmiClient = createClient({
   autoConnect: true,
   connectors: w3mConnectors({ projectId, version: 1, chains }),
+
   provider,
 });
 const ethereumClient = new EthereumClient(wagmiClient, chains);
@@ -40,6 +43,7 @@ function App() {
               <Route path="/home" element={<Home />} />
               <Route path="/projects" element={<Projects />} />
               <Route path="/my-profile" element={<UserProfile />} />
+              <Route path="/donate/:projectAddress" element={<Donate />} />
             </Routes>
       
             <Footer />
@@ -47,7 +51,10 @@ function App() {
         </DonationProvider>
       </WagmiConfig>
 
-      <Web3Modal projectId={projectId} ethereumClient={ethereumClient} />
+      <Web3Modal projectId={projectId} ethereumClient={ethereumClient}  themeVariables={{
+    '--w3m-font-family': 'Open Sans, sans-serif',
+    '--w3m-accent-color': '#6A23E7',
+  }}/>
     </>
   );
 }

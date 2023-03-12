@@ -4,7 +4,8 @@ import {VscVerifiedFilled} from 'react-icons/vsc'
 import { DonationContext } from "../../context/Donation";
 import { useContext } from "react";
 import { allowance } from "../../utils/contract";
-import {TbCoins} from 'react-icons/tb'
+import {TbCoins} from 'react-icons/tb';
+
 export const DonationCard = () => {
 
   const {getIncreaseAllowance, getTransferFrom, allowanceData, checkAllowance, donationAmount, setDonationAmount, checkBalance, balance, txConfirmed, txHash, txInit} = useContext(DonationContext)
@@ -14,7 +15,7 @@ export const DonationCard = () => {
    
     <div className="donation-container">
    <div className="flex donation-card">
-      <div className="w-1/2 h-full bg-slate-50 p-10 donation-card-1">
+      <div className="w-1/2 h-full bg-don-card p-10 donation-card-1">
         <div className="h-2/4">
           <img src="./assets/charity.avif" alt="" className="charity-img"/>
         </div>

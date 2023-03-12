@@ -8,7 +8,8 @@ export const projects = [
         raisedAmount: "20,000",
         verified: "true",
         image: "./assets/charity.avif",
-        tags: "animal welfare"
+        tags: "animal welfare",
+        address: "0x885Af893004B4405Dc18af1A4147DCDCBdA62b50"
     },
     {
         id: 2,
@@ -19,7 +20,8 @@ export const projects = [
         raisedAmount: "25,000",
         verified: "true",
         image: "./assets/charity.avif",
-        tags: "environment"
+        tags: "environment",
+        address: "0x217087dE248CDc7Ed41fFb785E247F0C8C14Ecc4"
     },
     {
         id: 3,
@@ -30,7 +32,8 @@ export const projects = [
         raisedAmount: "20,100",
         verified: "true",
         image: "./assets/charity.avif",
-        tags: "poverty"
+        tags: "poverty",
+        address: "0x255dCd452406EDDbeeEf5A3911f33dC94d816314"
     },
     {
         id: 4,
@@ -41,7 +44,8 @@ export const projects = [
         raisedAmount: "17,500",
         verified: "true",
         image: "./assets/charity.avif",
-        tags: "natural disaster"
+        tags: "natural disaster",
+        address: "0x1b2043b4ff07eEF24B3E165da5C98A48DB1104Bd"
     },
 
 ]

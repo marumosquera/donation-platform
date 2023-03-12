@@ -1,8 +1,8 @@
 import React from "react";
 import "./Footer.css";
 import { Link } from "react-router-dom";
-import { FiInstagram } from "react-icons/fi";
-import { GrFacebook } from "react-icons/gr";
+import { SiTwitter, SiDiscord, SiGithub , SiGitbook} from "react-icons/si";
+
 export const Footer = () => {
   return (
     <section className="relative py-24 overflow-hidden">
@@ -25,20 +25,20 @@ export const Footer = () => {
           </div>
           <div className="w-full md:w-1/2 lg:w-2/12 p-6">
             <div className="h-full">
-              <h3 className="mb-9 font-heading font-semibold text-xs text-gray-500 uppercase tracking-px">
+              <h3 className="mb-9 font-heading font-semibold text-xs text-gray-200 uppercase tracking-px">
                 Menu
               </h3>
               <ul>
-                <li className="mb-4 font-heading font-medium text-base text-gray-900 hover:text-gray-700">
+                <li className="mb-4 font-heading font-medium text-base text-gray-700 hover:text-gray-200">
                   <Link to="/"> Home </Link>
                 </li>
-                <li className="mb-4 font-heading font-medium text-base text-gray-900 hover:text-gray-700">
-                  <Link to="/tienda"> Tienda </Link>
+                <li className="mb-4 font-heading font-medium text-base text-gray-700 hover:text-gray-200">
+                  <Link to="/tienda"> Projects </Link>
                 </li>
-                <li className="mb-4 font-heading font-medium text-base text-gray-900 hover:text-gray-700">
+                <li className="mb-4 font-heading font-medium text-base text-gray-700 hover:text-gray-200">
                   <Link to="/about-us"> About us </Link>
                 </li>
-                <li className="mb-4 font-heading font-medium text-base text-gray-900 hover:text-gray-700">
+                <li className="mb-4 font-heading font-medium text-base text-gray-700 hover:text-gray-200">
                   <Link to="/faq"> FAQ </Link>
                 </li>
               </ul>
@@ -46,36 +46,56 @@ export const Footer = () => {
           </div>
           <div className="w-full md:w-1/2 lg:w-2/12 p-6">
             <div className="h-full">
-              <h3 className="mb-9 font-heading font-semibold text-xs text-gray-500 uppercase tracking-px">
-                Redes Sociales
+              <h3 className="mb-9 font-heading font-semibold text-xs text-gray-200 uppercase tracking-px">
+                Reach out to us!
               </h3>
               <ul className="flex">
                 <li className="mb-4 m-4">
                   <a
-                    className="font-heading font-medium text-base text-gray-900 hover:text-gray-700"
-                    href="https://www.instagram.com/ellie.shampoo/"
+                    className="font-heading font-medium text-base text-gray-700 hover:text-gray-200"
+                    href="https://www.twitter.com/wearepiltri/"
                     target="_blank"
                   >
-                    <FiInstagram />
+                   <SiTwitter/>
                   </a>
                 </li>
                 <li className="mb-4 m-4">
                   <a
-                    className="font-heading font-medium text-base text-gray-900 hover:text-gray-700"
-                    href="https://www.facebook.com/ellie.shampoo"
+                    className="font-heading font-medium text-base text-gray-700 hover:text-gray-200"
+                    href="https://www.twitter.com/wearepiltri/"
                     target="_blank"
                   >
-                    <GrFacebook />
+                    <SiDiscord/>
                   </a>
                 </li>
                 <li className="mb-4 m-4">
                   <a
-                    className="font-heading font-medium text-base text-gray-900 hover:text-gray-700"
-                    href="#"
+                    className="font-heading font-medium text-base text-gray-700 hover:text-gray-200"
+                    href="https://www.twitter.com/wearepiltri/"
+                    target="_blank"
                   >
-                    info@piltri.io
+                    <SiGithub/>
                   </a>
                 </li>
+                <li className="mb-4 m-4">
+                  <a
+                    className="font-heading font-medium text-base text-gray-700 hover:text-gray-200"
+                    href="https://www.twitter.com/wearepiltri/"
+                    target="_blank"
+                  >
+                    <SiGithub/>
+                  </a>
+                </li>
+                <li className="mb-4 m-4">
+                  <a
+                    className="font-heading font-medium text-base text-gray-700 hover:text-gray-200"
+                    href="https://www.twitter.com/wearepiltri/"
+                    target="_blank"
+                  >
+                    <SiGitbook/>
+                  </a>
+                </li>
+              
               </ul>
             </div>
           </div>
