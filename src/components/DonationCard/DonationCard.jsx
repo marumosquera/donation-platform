@@ -1,126 +1,147 @@
 import React from "react";
-import './DonationCard.css';
-import {VscVerifiedFilled} from 'react-icons/vsc'
+import "./DonationCard.css";
+import { VscVerifiedFilled } from "react-icons/vsc";
 import { DonationContext } from "../../context/Donation";
 import { useContext } from "react";
 import { allowance } from "../../utils/contract";
-import {TbCoins} from 'react-icons/tb';
+import { TbCoins } from "react-icons/tb";
+import { SiTwitter } from "react-icons/si";
 
-export const DonationCard = () => {
-
-  const {getIncreaseAllowance, getTransferFrom, allowanceData, checkAllowance, donationAmount, setDonationAmount, checkBalance, balance, txConfirmed, txHash, txInit} = useContext(DonationContext)
-
+export const DonationCard = ({ project }) => {
+  const {
+    getIncreaseAllowance,
+    getTransferFrom,
+    allowanceData,
+    checkAllowance,
+    donationAmount,
+    setDonationAmount,
+    checkBalance,
+    balance,
+    txConfirmed,
+    txHash,
+    txInit,
+  } = useContext(DonationContext);
 
   return (
-   
     <div className="donation-container">
-   <div className="flex donation-card">
-      <div className="w-1/2 h-full bg-don-card p-10 donation-card-1">
-        <div className="h-2/4">
-          <img src="./assets/charity.avif" alt="" className="charity-img"/>
-        </div>
-        <div className="h-1/4">
-          <div className="flex verified">
-            <VscVerifiedFilled/>
-            <span>verified</span>
+      <div className="flex donation-card">
+        <div className="w-1/2 bg-don-card donation-card-1">
+          
+          <div className="h-2/4">
+            <img
+              src={project.image}
+              alt={project.projectName}
+              className="charity-img"
+            />
           </div>
-          <div>
-              <span className="text-sm"> 0x885Af893004B4405Dc18af1A4147DCDCBdA62b50 </span>
+          <div className="h-1/4 p-10 pt-5">
+            <div className="flex verified">
+              <VscVerifiedFilled className="text-lg"/>
+              <span className="mr-1 ml-1">verified</span>
+            </div>
+            <div>
+              <span className="text-sm"> {project.address} </span>
+            </div>
+            <div className="mt-2">
+              <p className="font-black">{project.projectName}</p>
+              <p className="font-bold text-gray-500 text-md">{project.projectOwner}</p>
+            </div>
           </div>
-          <div>
-            <p className="font-black">PiltriAid Charity</p>
-            <p className="font-bold">piltri team & co</p>
-          </div>
-        </div>
-        <div className="h-1/4">
-          <p className="text-xs text-slate-400">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-          <p className="text-xs mt-2">Raised: $20,000</p>
-        </div>
-      </div>
-      <div className="w-1/2 bg-slate-200 p-10 donation-card-2">
-        <div className="h-1/3 m-5">
-          <p className="donate-with mb-10">Donate with: <span>USDC</span> </p>
-          <p className="flex icon">
-            <span className="mr-4">
-            Your balance is:
-            </span>
-             <TbCoins/> {balance}
+          <div className="h-1/4 p-10 pt-5">
+            <p className="text-xs text-slate-400">
+              {project.projectBriefDescription}
             </p>
-        </div>
-        <div className="h-1/3">
-          <div className="flex allowance">
-            <p>Allowance:</p>
-            <p className="flex icon"> <TbCoins/> {allowanceData}</p>
+            <p className="text-xs mt-2">{project.raisedAmount}</p>
           </div>
-          <div>
-            <p className="font-medium"> DONATE: </p>
+        </div>
+        {!txConfirmed
+          ?  
+           <div className="w-1/2 bg-slate-100 p-10 donation-card-2  ">
+          <div className="h-3/6">
+            <p className="donate-with mb-6">Donate with </p>
             <div className="flex">
-              <p onClick={()=>setDonationAmount(100)} className={donationAmount==100 ? `active-money` : `inactive-money`}>$100</p>
-              <p onClick={()=>setDonationAmount(500)} className={donationAmount==500 ? `active-money` : `inactive-money`}>$500</p>
-              <p onClick={()=>setDonationAmount(1000)} className={donationAmount==1000 ? `active-money` : `inactive-money`}>$1000</p>
-              <p onClick={()=>setDonationAmount(5000)} className={donationAmount==5000 ? `active-money` : `inactive-money`}>$5000</p>
+              <select
+                id="tokens"
+                className=" text-gray-900 text-sm focus:ring-gray-500 focus:border-gray-700 block w-full p-2.5 "
+              >
+                <option selected>Choose a token</option>
+                <option value="USDC">USDC</option>
+                <option value="USDT">USDT</option>
+                <option value="DAI">DAI</option>
+                <option value="ETH">ETH</option>
+              </select>
+              <input type="number" placeholder="Amount"></input>
             </div>
-            {(allowanceData >  donationAmount)
-              ? <>
-                <button onClick={()=> getTransferFrom()} class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">DONATE</button>
-              </>
-              : <>
-               <button onClick={()=> getIncreaseAllowance()} class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">INCREASE ALLOWANCE</button>
-              </>
-            }
-          
-          </div>
-        </div>
-        <div className="h-1/3">
-          <div>
-
-          </div>
-          <div>
-            <div className="flex mt-5">
-              <div>
-             
-                <p className={!txInit ? `active` : `inactive`}>Select donation amount</p>
-              </div>
-              <div>
-             
-                <p className={txInit ? `active` : `inactive`}>Approve in metamask</p>
-              </div>
-              <div>
-          
-                <p className={txHash ? `active` : `inactive`}>Await transaction</p>
-              </div>
-              <div>
-        
-                <p className={txConfirmed ? `active` : `inactive`}>Successful transaction</p>
-              </div>
+            <div>
+              <p className="text-gray-400 text-xs mt-2">Available: <span className="strong-detail"> {balance} </span>  USDC </p>
             </div>
-            {!txConfirmed
-                ?!txInit
-                    ?<>
-                        <div>
-                         
-                        </div>
+            <div className="text-gray-600 text-sm mt-2">
+              Donating to <span className="strong-detail"> {project.projectName} </span>
+            </div>
+          </div>
+          <div className="h-2/6">
+          <div className="donation-process">
+              {!txConfirmed ? (
+                !txInit ? (
+                  allowanceData > donationAmount ? (
+                    <>
+                      <button onClick={() => getTransferFrom()} className="donation-card-btn">
+                        DONATE
+                      </button>
                     </>
-                    : txHash !== undefined
-                        ?<>
-                            {/* remember to remove the rinkeby from the link when deploying to production */}
-                            <p>Claim transaction is being processed. You can view your transaction 
-                            <a href={"https://goerli.etherscan.io/tx/" + txHash} target="_blank" rel="noopener noreferrer" className="mr-2">here</a>
-                            </p>
-                        </>
-                        :<>
-                            <p>Confirm transaction in your wallet to proceed.</p>
-                        </>
-                :<>
-                <p>Congratulations.</p>
-                </> 
-                
-         }
+                  ) : (
+                    <>
+                      <button onClick={() => getIncreaseAllowance()} className="donation-card-btn">
+                        DONATE
+                      </button>
+                    </>
+                  )
+                ) : txHash !== undefined ? (
+                  <>
+                    {/* remember to remove the rinkeby from the link when deploying to production */}
+                    <p>
+                      Claim transaction is being processed. You can view your
+                      transaction
+                      <a
+                        href={"https://goerli.etherscan.io/tx/" + txHash}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mr-2"
+                      >
+                        here
+                      </a>
+                    </p>
+                  </>
+                ) : (
+                  <>
+                    <p>Confirm transaction in your wallet to proceed.</p>
+                  </>
+                )
+              ) : (
+                <>
+                  <p>Congratulations.</p>
+                </>
+              )}
+            </div>
+            </div>
+          <div className="h-1/6">
+           
+          <div>
+              <span>
+                Can't donate? Don't worry, sharing is caring! Help us spread the word <SiTwitter className="inline-block text-sky-400" />
+              </span>
+            </div>
           </div>
+         
         </div>
+        :  <div className="w-1/2 bg-slate-200 p-10 donation-card-2">
+            <p>Together, we can make a difference. Share your donation on Twitter and show your support for our cause.</p>
+        </div>
+
+        }
+       
+      
       </div>
-    </div>
- 
     </div>
   );
 };

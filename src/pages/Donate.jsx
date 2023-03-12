@@ -5,7 +5,7 @@ import { DonateCardContainer } from '../components/DonateCardContainer/DonateCar
 export const Donate = () => {
   const { projectAddress } = useParams();
   return (
-    <div className='page-size'>
+    <div className='page-size donate-bg'>
     <DonateCardContainer/>
     </div>
   

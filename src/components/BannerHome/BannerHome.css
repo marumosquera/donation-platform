@@ -1,0 +1,164 @@
+.banner-home {
+  height: 100vh;
+  width: 100%;
+  background-image: url("../../../public/assets/bannerdesktop.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+.banner-home h1:nth-child(1) {
+  position: absolute;
+  top: 28%;
+  left: 10%;
+  font-size: xxx-large;
+  font-weight: 900;
+  color: white;
+}
+.banner-home h1:nth-child(2) {
+  position: absolute;
+  top: 35%;
+  left: 10%;
+  font-size: xx-large;
+  color: white;
+  font-weight: 800;
+}
+
+.banner-home p {
+  position: absolute;
+  top: 45%;
+  left: 10%;
+  font-size: xx-large;
+  color: white;
+  font-weight: 600;
+}
+
+.banner-home button {
+  /* position: absolute;
+  top: 80%;
+  left: 15%;
+  font-size: larger;
+  padding: 8px;
+  color: rgb(40, 105, 191);
+  font-weight: 600;
+  border: 3px solid rgb(237, 231, 231);
+  background: rgba(255, 255, 255, 0.43);
+  border-radius: 10px;
+  font-family: Dolce;
+  letter-spacing: 3px; */
+
+  background: radial-gradient(70.64% 70.64% at 50% 25.87%, #9A60FF 0%, #6A23E7 100%);
+  padding: 20px 34px;
+  border-radius: 3rem;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 10%);
+  -webkit-transition: .2s;
+  transition: .2s;
+  color: #fff;
+  font-size: 1.75rem;
+  font-weight: 900;
+  letter-spacing: 0.5em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: capitalize;
+  cursor: pointer;
+  position: absolute;
+  top: 60%;
+  left: 40%;
+  
+}
+
+.banner-home button:hover {
+  background-color: rgba(255, 255, 255, 0.757);
+}
+.shampoo {
+  width: 260px;
+  position: absolute;
+}
+.first {
+  top: 10%;
+  left: 50%;
+}
+
+.second {
+  top: 50%;
+  left: 20%;
+}
+
+.third {
+  top: 45%;
+  right: 45%;
+  width: 220px;
+}
+@media (max-width: 850px) {
+  .first {
+    top: 50%;
+    left: 50%;
+    width: 310px;
+  }
+
+  .second {
+    display: none;
+  }
+
+  .third {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  .banner-home {
+    /* background-image: url("../../../public/assets/mobilebanner.svg"); */
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+  }
+  .banner-home h1:nth-child(1) {
+    position: absolute;
+    top: 85%;
+    left: 25%;
+    font-size: x-large;
+    font-weight: 800;
+    color: white;
+    text-shadow: none;
+  }
+  .banner-home h1:nth-child(2) {
+    position: absolute;
+    top: 88%;
+    left: 32%;
+    font-size: larger;
+    color: white;
+    font-weight: 800;
+    text-shadow: none;
+  }
+
+  .banner-home p {
+    position: absolute;
+    top: 92%;
+    left: 23%;
+    font-size: large;
+    color: black;
+    font-weight: 700;
+    text-shadow: none;
+  }
+
+  .banner-home button {
+    display: none;
+  }
+  .banner-home button:hover {
+    background-color: black;
+    color: white;
+  }
+
+  .first {
+    top: 60%;
+    left: 13%;
+    width: 310px;
+  }
+
+  .second {
+    display: none;
+  }
+
+  .third {
+    display: none;
+  }
+}

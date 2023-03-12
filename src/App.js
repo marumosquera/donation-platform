@@ -6,7 +6,7 @@ import {
   w3mProvider,
 } from "@web3modal/ethereum";
 import { Web3Modal } from "@web3modal/react";
-import { configureChains, createClient, WagmiConfig } from "wagmi";
+import { configureChains, createClient, goerli, WagmiConfig } from "wagmi";
 import { arbitrum, mainnet, polygon } from "wagmi/chains";
 import { ConnectWallet } from "./components/ConnectWallet/ConnectWallet";
 import { Home } from "./pages/Home";
@@ -19,7 +19,7 @@ import { UserProfile } from "./pages/UserProfile";
 import { Donate } from "./pages/Donate";
 import { GrEmergency } from "react-icons/gr";
 
-const chains = [arbitrum, mainnet, polygon];
+const chains = [goerli];
 const projectId = "41557e3b3f0f43cc44309c3fdef4241e";
 
 const { provider } = configureChains(chains, [w3mProvider({ projectId })]);

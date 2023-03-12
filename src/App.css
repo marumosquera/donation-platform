@@ -2,20 +2,34 @@
   text-align: center;
 }
 
-nav{
+nav {
   background-color: transparent;
 }
 
-body{
+body {
   background-color: black;
-  
+
   color: white;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 900;
 }
 
-.page-size{
+.page-size {
   min-height: 80vh;
+}
+
+.donate-bg {
+  min-height: 200vh;
+  height: max-content;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(24, 149, 104, 0.6083026960784313) 30%,
+    rgba(0, 255, 163, 0.6307116596638656) 50%,
+    rgba(30, 166, 117, 0.6111038165266107) 70%,
+    rgba(0, 0, 0, 1) 100%
+  );
 }
 
 .App-logo {

@@ -1,0 +1,29 @@
+.banner-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .banner-title > span{
+    -webkit-text-fill-color: transparent;
+    background: -webkit-linear-gradient(101.11deg,#f087ff 14.47%,#6e1fce 39.43%,rgba(140, 66, 231, 0.1) 96.77%);
+    -webkit-background-clip: text;
+    font-size: 3em;
+    color: white;
+    font-weight: 800;
+    border-top: 2px solid white ;
+    border-bottom: 2px solid white ;
+    background-image: url(https://media.giphy.com/media/NEVT1WQFlHec8/giphy.gif);
+    background-size: cover;
+    color: transparent;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    text-transform: uppercase;
+    margin: 10px 0;
+} */
+
+.banner-title > span {
+    font-weight: 900;
+    font-size: xxx-large;
+    margin: 10px;
+}

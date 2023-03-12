@@ -2,7 +2,7 @@
   height: fit-content;
   word-wrap: normal;
   background: rgba(0, 0, 0, 0.7);
-  border-radius: 20px;
+  border-radius: 20px !important;
   box-shadow: -1px 5px 10px 5px rgba(27, 26, 27, 0.67);
   -webkit-box-shadow: -1px 5px 10px 5px rgba(27, 26, 27, 0.67);
   -moz-box-shadow: -1px 5px 10px 5px rgba(27, 26, 27, 0.67);

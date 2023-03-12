@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center;
     align-content: center;
+    min-height: 500px;
 }
 
 .bg-don-card{
@@ -9,9 +10,8 @@
 }
 
 .donate-with{
-    font-size: larger;
-    font-weight: 700;
-    text-align: center;
+    font-size: xx-large;
+    font-weight: 900;
 }
 
 .donation-card{
@@ -24,11 +24,16 @@
 
 .donation-card-2{
     border-radius: 0px 20px 20px 0px;
+    color: black;
+}
+
+.strong-detail{
+    font-weight: 800;
 }
 
 .charity-img{
-    width: 350px;
-    border-radius: 20px;
+    width: fit-content;
+    border-radius: 20px 0px 0px 0px;
 }
 
 .allowance{
@@ -42,11 +47,11 @@
     display: flex;
     align-items: center;
     font-weight: 800;
-    background-color: greenyellow ;
-    border: 3px solid greenyellow;
     border-radius: 20px;
-    padding: 2px;
+    padding: 5px;
+    padding-left: 6px;
     width: fit-content;
+    color: #00FFA3;
 }
 
 .icon{
@@ -126,4 +131,50 @@
     padding-top: 4px;
     padding-right: 8px;
     padding-bottom: 4px;
+}
+
+.donation-card-btn{
+    
+    background: -webkit-linear-gradient(
+        to top,
+        #18a572,
+        #12a670
+      ); /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(
+        to top,
+        #00FFA3,
+        #12a670
+      );
+    padding: 12px 18px;
+    border-radius: 3rem;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 10%);
+    -webkit-transition: .2s;
+    transition: .2s;
+    color: #000;
+    font-size: 1rem;
+    font-weight: 900 !important;
+    letter-spacing: 0.2em;
+    text-align: center;
+    text-decoration: none;
+    text-transform: capitalize;
+    cursor: pointer;
+    margin-top: 2em;
+}
+
+.donation-card-btn:hover{
+    background: radial-gradient(70.64% 70.64% at 50% 25.87%, #2ba176 0%, #13de94 100%);
+    transition-duration: .6s;
+    padding: 16px 21px;
+    letter-spacing: 0.4em;
+    color: white;
+}
+
+.donation-process{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.donation-process > p{
+    padding-top: 40px;
 }
