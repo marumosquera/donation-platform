@@ -61,7 +61,7 @@ export const DonationCard = ({ project }) => {
             <p className="text-xs mt-2">{project.raisedAmount}</p>
           </div>
         </div>
-        {txConfirmed
+        {!txConfirmed
           ?  
            <div className="w-1/2 bg-slate-100 p-10 donation-card-2  ">
           <div className="h-3/6">
