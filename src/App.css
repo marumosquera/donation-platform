@@ -8,10 +8,8 @@ nav {
 
 body {
   background-color: black;
-
   color: white;
   font-family: "Open Sans", sans-serif;
-  font-weight: 900;
 }
 
 .page-size {
@@ -19,7 +17,7 @@ body {
 }
 
 .donate-bg {
-  min-height: 200vh;
+  min-height: 180vh;
   height: max-content;
   background: rgb(0, 0, 0);
   background: linear-gradient(

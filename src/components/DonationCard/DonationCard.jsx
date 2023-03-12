@@ -6,6 +6,7 @@ import { useContext } from "react";
 import { allowance } from "../../utils/contract";
 import { TbCoins } from "react-icons/tb";
 import { SiTwitter } from "react-icons/si";
+import bear from '../assets/bear.svg';
 
 export const DonationCard = ({ project }) => {
   const {
@@ -21,6 +22,12 @@ export const DonationCard = ({ project }) => {
     txHash,
     txInit,
   } = useContext(DonationContext);
+
+  const handleChange = (e) => {
+    const inputData = e.target.value
+    console.log(inputData)
+    setDonationAmount(inputData);
+  };
 
   return (
     <div className="donation-container">
@@ -54,7 +61,7 @@ export const DonationCard = ({ project }) => {
             <p className="text-xs mt-2">{project.raisedAmount}</p>
           </div>
         </div>
-        {!txConfirmed
+        {txConfirmed
           ?  
            <div className="w-1/2 bg-slate-100 p-10 donation-card-2  ">
           <div className="h-3/6">
@@ -66,11 +73,9 @@ export const DonationCard = ({ project }) => {
               >
                 <option selected>Choose a token</option>
                 <option value="USDC">USDC</option>
-                <option value="USDT">USDT</option>
-                <option value="DAI">DAI</option>
-                <option value="ETH">ETH</option>
+                
               </select>
-              <input type="number" placeholder="Amount"></input>
+              <input type="number" placeholder="Amount" onChange={(e)=>handleChange(e)} ></input>
             </div>
             <div>
               <p className="text-gray-400 text-xs mt-2">Available: <span className="strong-detail"> {balance} </span>  USDC </p>
@@ -106,7 +111,7 @@ export const DonationCard = ({ project }) => {
                         href={"https://goerli.etherscan.io/tx/" + txHash}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="mr-2"
+                        className="ml-2 decoration-lime-500 decoration-solid font-bold"
                       >
                         here
                       </a>
@@ -127,16 +132,25 @@ export const DonationCard = ({ project }) => {
           <div className="h-1/6">
            
           <div>
+            <a href="https://ctt.ac/hL_VK" target="_blank">
               <span>
                 Can't donate? Don't worry, sharing is caring! Help us spread the word <SiTwitter className="inline-block text-sky-400" />
               </span>
+              </a>
             </div>
           </div>
          
         </div>
         :  <div className="w-1/2 bg-slate-200 p-10 donation-card-2">
-            <p>Together, we can make a difference. Share your donation on Twitter and show your support for our cause.</p>
-        </div>
+            <h1 className="font-black text-center text-2xl mt-6">Thank you for your support! </h1>
+            <p className="mt-10 font-medium mb-4">Your donation was successfully transfered to: <span className="font-semibold text-gray-500">{project.address} </span> </p>
+            <img src={bear} className="ty-img"></img>
+            
+            <p className="mt-8 font-semibold text-center text-lg">Together, we can make a difference!</p>
+            <a href="https://ctt.ac/Dlc21" target="_blank"> 
+            <p className="mt-2 font-bold text-center text-lg">Share your donation on Twitter and show your support for our cause. <SiTwitter className="inline-block text-sky-400" /></p>
+            </a>
+       </div>
 
         }
        

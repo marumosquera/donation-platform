@@ -3,6 +3,8 @@ import { ConnectWallet } from "../ConnectWallet/ConnectWallet";
 import "./NavBar.css";
 import { Link } from "react-router-dom";
 
+import bear from '../assets/bear.svg';
+
 export const NavBar = () => {
   return (
     <>
@@ -12,7 +14,7 @@ export const NavBar = () => {
             {" "}
             <a className="flex items-center">
               <span className="self-center text-xl font-semibold whitespace-nowrap flex logo">
-                <img src="./piltri.svg" alt="" />
+                <img src={bear} alt="" />
                 <img src="../assets/piltri-text.svg" alt="PILTRI" />
               </span>
             </a>

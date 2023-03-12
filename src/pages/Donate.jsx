@@ -6,7 +6,7 @@ import { ProjectOverview } from '../components/ProjectOverview/ProjectOverview';
 export const Donate = () => {
   const { projectAddress } = useParams();
   return (
-    <div className='page-size donate-bg'>
+    <div className='page-size donate-bg mt-15'>
     <DonateCardContainer/>
     <ProjectOverview/>
     </div>
