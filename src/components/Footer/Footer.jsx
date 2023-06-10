@@ -2,16 +2,17 @@ import React from "react";
 import "./Footer.css";
 import { Link } from "react-router-dom";
 import { SiTwitter, SiDiscord, SiGithub , SiGitbook, SiLinkedin} from "react-icons/si";
+import logo from "../../assets/whitepiltri.png"
 
 export const Footer = () => {
   return (
-    <section className="relative py-24 overflow-hidden">
+    <section className="relative py-24 overflow-hidden bg-black">
       <div className="relative z-10 container mx-auto px-4">
         <div className="flex flex-wrap -m-6">
           <div className="w-full md:w-1/2 lg:w-5/12 p-6">
             <div className="flex flex-col justify-between h-full">
               <div>
-                <img className="mb-4 w-1/2" src="../assets/piltri-text.svg" alt="PILTRI" />
+                <img className="mb-4 w-1/2" src={logo} alt="PILTRI" />
               </div>
               <div>
                 <p className="mb-4 font-heading font-medium text-2xl">
@@ -23,7 +24,7 @@ export const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="w-full md:w-1/2 lg:w-2/12 p-6">
+          {/* <div className="w-full md:w-1/2 lg:w-2/12 p-6">
             <div className="h-full">
               <h3 className="mb-9 font-heading font-semibold text-ls text-gray-200 uppercase tracking-px">
                 Menu
@@ -46,7 +47,7 @@ export const Footer = () => {
                 </li>
               </ul>
             </div>
-          </div>
+          </div> */}
           <div className="w-full md:w-1/2 lg:w-2/12 p-6">
             <div className="h-full">
               <h3 className="mb-9 font-heading font-semibold text-ls text-gray-200 uppercase tracking-px">

@@ -18,6 +18,7 @@ import { Projects } from "./pages/Projects";
 import { UserProfile } from "./pages/UserProfile";
 import { Donate } from "./pages/Donate";
 import { GrEmergency } from "react-icons/gr";
+import { Emprear } from "./pages/Emprear";
 
 const chains = [goerli];
 const projectId = "41557e3b3f0f43cc44309c3fdef4241e";
@@ -41,9 +42,10 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/home" element={<Home />} />
-              <Route path="/projects" element={<Projects />} />
+              <Route path="/emprear" element={<Emprear />} />
+              {/* <Route path="/projects" element={<Projects />} />
               <Route path="/my-profile" element={<UserProfile />} />
-              <Route path="/donate/:projectAddress" element={<Donate />} />
+              <Route path="/donate/:projectAddress" element={<Donate />} /> */}
             </Routes>
       
             <Footer />

@@ -1,0 +1,22 @@
+.banner-home {
+    display: flex;
+    justify-content: center;
+   
+  .home-info-container {
+    width: 677px;
+    height: 180px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 60px;
+    letter-spacing: 0.1em;
+
+    color: #000000;
+  }
+
+  .home-img {
+    width: 425px;
+    height: 424.09px;
+  }
+}

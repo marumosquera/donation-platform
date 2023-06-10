@@ -1,14 +1,25 @@
-import React from 'react'
-import './BannerHome.css'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Link } from "react-router-dom";
+import causes from "../../assets/hexagoncauses.svg";
+import "./BannerHome.scss";
 
 export const BannerHome = () => {
   return (
-    <div className='banner-home'>
-        <h1>We need you,</h1>
-        <h1>play your part</h1>
-        <p>Donations with us are simple and fun</p>
-        <Link to="/projects"> <button> DONATE NOW </button></Link> 
+    <div className="banner-home w-full flex">
+      <div className="home-info-container w-1/2">
+        <h1>
+          The world needs you.
+          <b>play your part 🐝</b>
+          Choose your <b>contribution </b>.
+        </h1>
+        <Link to="/emprear">
+        {" "}
+        <button> donar a Emprear </button>
+      </Link>
+      </div>
+      <div className="w-1/2 home-img">
+        <img src={causes} alt="piltri causes" />
+      </div>
     </div>
-  )
-}
+  );
+};

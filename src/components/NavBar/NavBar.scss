@@ -1,0 +1,27 @@
+nav{
+  display: flex;
+  justify-content: center;
+  .navbar{
+    /* navbar */
+    box-sizing: border-box;
+    width: 80%;
+    background: linear-gradient(
+      90.2deg,
+      rgba(255, 255, 255, 0.62) 3.48%,
+      rgba(255, 255, 255, 0.17) 97.47%
+    );
+    box-shadow: 0px 4px 4px rgba(236, 233, 233, 0.8);
+    border-radius: 50px;
+    padding: 1em 3em 1em 3em;
+    margin: 2em;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    img{
+      width: 80px;
+      height: 80px;
+    }
+  
+  }
+  
+}
